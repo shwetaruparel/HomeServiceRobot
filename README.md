@@ -1,20 +1,20 @@
 # HomeServiceRobot
 ### The goal of this project is to program a robot that can autonomously map an environment and pick up and drop virtual objects.
 
-  ### The Home Service Robot Project is composed of multiple steps as follows:
+  #### The Home Service Robot Project is composed of multiple steps as follows:
       1. Build a real-wrold envieonment in simulation using Gazebo
       2. Interface SLAM with a wall followe node to autonomously map an environment.
       3. After building a map, reach multiple goals and orient itself with respect to them using ROS navigation stack.
       4. Model virtual object with markers and deploy them with ROS.
   
-  ### Udacity GPU workspace was used to create the project .
+  #### Udacity GPU workspace was used to create the project .
     Project setup
     Update system: sudo apt-get update
 
-  This project utilizes the following ROS packages.
-      gmapping turtlebot_teleop turtlebot_rviz_launchers turtlebot_gazebo
+    This project utilizes the following ROS packages.
+    gmapping turtlebot_teleop turtlebot_rviz_launchers turtlebot_gazebo
     
-#### Create workspace and Install Packages
+  #### Create workspace and Install Packages
     $ mkdir -p ~/catkin_ws/src
     $ cd ~/catkin_ws/src
     $ catkin_init_workspace
@@ -40,9 +40,8 @@
     $ catkin_make
     $ source devel/setup.bash
 
-#### Copy the content of this directory into /catkin_ws/src
+  #### Copy the content of this directory into /catkin_ws/src
     Catkin workspace should look something like this:
-
     catkin_ws/src
         ├── slam_gmapping                  # gmapping_demo.launch file                   
         │   ├── gmapping
@@ -56,7 +55,7 @@
         ├── turtlebot_simulator            # turtlebot_world.launch file 
         │   ├── turtlebot_gazebo
         │   ├── ...
-        ├── World                          # world files
+        ├── Worlds                          # world files
         │   ├── ...
         ├── ShellScripts                   # shell scripts files
         │   ├── ...
@@ -77,5 +76,13 @@
     $ cd ~/catkin_ws
     $ source devel/setup.bash
     $ catkin_make
-    Run ./home_service.sh in ShellScripts directory to deploy the home service robot.
-  ### The following official ROS packages are used 
+    Run ./src/ShellScripts/home_service.sh in ShellScripts directory to deploy the home service robot.
+
+### Test the home service robot in simulation
+    An object is marked or displayed at pickup position and the robot will navigate to the object location after waiting for 5 sec.
+    The object is removed or unmarked from the pickup position to immitate that it is being picked up.
+    The robot moves back to the drop off location and the object reappears at the drop off location.
+####  Images
+
+
+#### Results
