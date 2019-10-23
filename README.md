@@ -1,3 +1,8 @@
+[//]: # (Image References)
+[image_1]: ./images/voxel_downsampled.pcd
+[image_2]: ./images/pass_through_filtered.pcd
+[image_3]: ./images/extracted_outliers.pcd
+[image_4]: ./images/extracted_inliers.pcd
 # HomeServiceRobot
 ### The goal of this project is to program a robot that can autonomously map an environment and pick up and drop virtual objects.
 
@@ -84,5 +89,16 @@
     The robot moves back to the drop off location and the object reappears at the drop off location.
 ####  Images
 
+The map created by using slam_gmapping package
+![Map][image_1]
+
+The object marker appears 
+![Pass Through Filter][image_2]
+
+The robot moves to the pickup location and object disappears
+![Table from extract indices][image_3]
+
+The robot moves to the drop off location and the object appears there
+![Voxel Grid Filtered][image_4]
 
 #### Results
