@@ -102,3 +102,5 @@ The robot moves to the drop off location and the object appears there
 ![Voxel Grid Filtered][image_4]
 
 #### Results
+
+The environment is mapped successfully and simuating the pickup and dropoff is also happening correctly. 
