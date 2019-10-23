@@ -7,8 +7,8 @@
       3. After building a map, reach multiple goals and orient itself with respect to them using ROS navigation stack.
       4. Model virtual object with markers and deploy them with ROS.
   
-  #### Udacity GPU workspace was used to create the project .
-    Project setup
+  ### Project Setup
+    Udacity GPU workspace was used to create the project
     Update system: sudo apt-get update
 
     This project utilizes the following ROS packages.
