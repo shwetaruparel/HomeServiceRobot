@@ -11,10 +11,10 @@
     Project setup
     Update system: sudo apt-get update
 
-    Install the ROS navigation stack: sudo apt-get install ros-kinetic-navigation
-
-    Create catkin workspace:
-
+  This project utilizes the following ROS packages.
+      gmapping turtlebot_teleop turtlebot_rviz_launchers turtlebot_gazebo
+    
+#### Create workspace and Install Packages
     $ mkdir -p ~/catkin_ws/src
     $ cd ~/catkin_ws/src
     $ catkin_init_workspace
@@ -27,10 +27,20 @@
     $ git clone https://github.com/turtlebot/turtlebot.git
     $ git clone https://github.com/turtlebot/turtlebot_interactions.git
     $ git clone https://github.com/turtlebot/turtlebot_simulator.git
-    Install package dependencies with rosdep install [package-name]
+    $ cd ~/catkin_ws/
+    $ source devel/setup.bash
+    $ rosdep -i install gmapping
+    #All required rosdeps installed successfully
+    $ rosdep -i install turtlebot_teleop
+    #All required rosdeps installed successfully
+    $ rosdep -i install turtlebot_rviz_launchers
+    #All required rosdeps installed successfully
+    $ rosdep -i install turtlebot_gazebo
+    #All required rosdeps installed successfully
+    $ catkin_make
+    $ source devel/setup.bash
 
-    Copy content of this repository to catkin_ws/src
-
+#### Copy the content of this directory into /catkin_ws/src
     Catkin workspace should look something like this:
 
     catkin_ws/src
